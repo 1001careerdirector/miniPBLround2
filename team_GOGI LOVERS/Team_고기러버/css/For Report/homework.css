@@ -1,0 +1,108 @@
+@charset "UTF-8";
+
+/*
+# 프로젝트명 : [팀빌딩 Round2]팀 포스터 만들기
+# 파일설명 : 팀 포스터 제작을 위한 워크시트용 CSS
+# 파일버전 : 1.0.0
+# 생성일 : 2025.05.31
+# 생성자 : 김선미(온다)
+# 수정일 : -
+# 수정자 : -
+# 작업내용 : -
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+} 
+
+body {
+  font-family: 'Malgun Gothic', sans-serif;
+  background: #f3f3f3;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+  line-height: 1.6;
+}
+.container {
+  max-width: 600px;
+  background: #fff;
+  margin: 0 auto;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.section {
+  margin-top: 30px;
+}
+.section:first-child {
+  margin-top: 0;
+}
+h1 {
+  text-align: center;
+  color: green;
+  padding-bottom: 10px;
+}
+h2 {
+  color: #333;
+  border-left: 5px solid #1a75bc;
+  padding-left: 10px;
+  margin-bottom: 15px;
+}
+h2.action{
+  color:red;
+}
+h3 {
+  color: #6f6f6f;
+  padding-bottom: 10px;
+}
+ul {
+  padding-left: 20px;
+  margin-bottom:20px;
+}
+img{
+  display:inline-block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;  
+}
+object, audio, video, embed{
+  width:100%;
+  height:calc(100vh - 30px);
+}
+.box {
+  border: 1px solid #ccc;
+  width: 100%;
+  min-height: 100px;
+  padding:10px;
+  margin: 5px 0 20px;
+  text-align:justify;
+  background: #f9f9f9;
+  border-radius: 5px;
+}
+.box ul,
+.box p:last-child{
+  margin-bottom:0;
+}
+.box p{
+  margin-bottom:10px;
+}
+.question{
+  font-weight: bold;
+  color: green;
+  margin-bottom: 10px;
+}
+.item{
+  font-weight: bold;;
+}
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #666;
+}

@@ -1,0 +1,168 @@
+@charset "UTF-8";
+
+/*
+# 프로젝트명 : [팀빌딩 Round2]팀 포스터 만들기
+# 파일설명 : 팀 포스터 제작을 위한 CSS 초기화
+# 파일버전 : 0.1.0
+# 생성일 : 2025.05.31
+# 생성자 : 김선미(온다)
+# 수정일 : -2025.06.10
+# 수정자 : -신주현
+# 작업내용 : -모든내용
+*/
+        body {
+            margin: 0;
+            font-family: 'Pretendard', sans-serif;
+            background-color: #e6f0ff;
+            color: #003366;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid #99ccff;
+        }
+
+        .logo-placeholder {
+            width: 60px;
+            height: 60px;
+            background-color: #3399ff;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .main-title {
+            margin: 0;
+            font-size: 2rem;
+            color: #0059b3;
+        }
+
+        .subtitle {
+            margin: 0;
+            color: #337ab7;
+        }
+
+        .team-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .team-card {
+            background-color: #cce6ff;
+            border-radius: 12px;
+            padding: 1rem;
+            flex: 1 1 250px;
+            transition: transform 0.3s ease;
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .member-avatar {
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: #004080;
+            margin-bottom: 0.5rem;
+        }
+
+        .member-name {
+            font-size: 1.3rem;
+            margin: 0.3rem 0;
+            color: #003366;
+        }
+
+        .member-bio {
+            margin: 0;
+        }
+
+        .backstory-section {
+            margin-top: 3rem;
+            background-color: #e0f0ff;
+            padding: 2rem;
+            border-radius: 12px;
+        }
+
+        .backstory-title {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #004d99;
+        }
+
+        .story-block {
+            margin-bottom: 1.5rem;
+        }
+
+        .story-subtitle {
+            font-size: 1.4rem;
+            color: #0059b3;
+        }
+
+        .story-text {
+            margin-top: 0.5rem;
+        }
+
+        .poster-section {
+            margin-top: 3rem;
+            background-color: #d0e7ff;
+            padding: 2rem;
+            border-radius: 12px;
+        }
+
+        .poster-title {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            color: #004080;
+        }
+
+        .poster-image {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .custom-poster-image {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .poster-year {
+            font-size: 1.2rem;
+            color: #003366;
+        }
+
+        .poster-info {
+            margin-top: 1rem;
+            color: #002244;
+        }
+
+        .footer {
+            margin-top: 4rem;
+            padding: 1rem 0;
+            background-color: #99ccff;
+            text-align: center;
+            border-radius: 0 0 12px 12px;
+        }
+
+        .footer-text {
+            margin: 0;
+            color: #00264d;
+        }
+

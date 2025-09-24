@@ -1,0 +1,135 @@
+@import url(font.css);
+@import url(poster.css);
+@import url(style.css);
+@import url(team-member.css);
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-pink: #ff6b9d;
+    --secondary-pink: #ff8fab;
+    --accent-pink: #ffc1cc;
+    --light-pink: #ffe0e6;
+    --dark-pink: #e91e63;
+    --text-primary: #2d3748;
+    --text-secondary: #718096;
+    --bg-primary: #ffffff;
+    --bg-secondary: #f7fafc;
+    --shadow: rgba(255, 107, 157, 0.15);
+    --border: rgba(255, 107, 157, 0.2);
+}
+
+[data-theme="dark"] {
+    --text-primary: #f7fafc;
+    --text-secondary: #cbd5e0;
+    --bg-primary: #1a202c;
+    --bg-secondary: #2d3748;
+    --shadow: rgba(255, 107, 157, 0.3);
+    --border: rgba(255, 107, 157, 0.4);
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--primary-pink);
+    border: none;
+    border-radius: 50px;
+    padding: 12px 20px;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 4px 20px var(--shadow);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.theme-toggle:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px var(--shadow);
+    background: var(--dark-pink);
+}
+
+.team-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    justify-content: flex-start;
+    align-items: stretch
+}
+
+@media (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.backstory-section {
+    margin-top: 20px;
+}
+
+.backstory-container {
+    background: var(--bg-primary);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 40px var(--shadow);
+    border: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+}
+
+.backstory-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-pink), var(--secondary-pink));
+}
+
+.backstory-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-pink);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.backstory-content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.story-block {
+    background: var(--bg-secondary);
+    border-radius: 15px;
+    padding: 25px;
+    border-left: 4px solid var(--primary-pink);
+    transition: all 0.3s ease;
+}
+
+.story-block:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 20px var(--shadow);
+}
+
+.story-subtitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary-pink);
+    margin-bottom: 15px;
+}
+
+.story-text {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    font-size: 1rem;
+}
