@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/For Web/css.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Dihydrogen monoxide</title>
+</head>
+
+<body class="font">
+    <button class="theme-toggle" onclick="toggleTheme()" aria-pressed="false" aria-label="Toggle dark mode">🌙 Dark
+        Mode</button>
+
+    <div class="container">
+        <header class="header">
+            <div class="logo-container">
+                <div class="logo-placeholder">D</div>
+                <div>
+                    <h1 class="main-title">Dihydrogen monoxide</h1>
+                    <p class="subtitle">Empowering People, One Drop of Change at a Time.</p>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <div class="left-content">
+                <section class="team-grid">
+                    <!-- aria-label 추가  -->
+                    <div class="team-card" role="region" aria-labelledby="member-name-1">
+                        <div class="member-avatar">리더</div>
+                        <!-- class 공백 -->
+                        <h3 class="member-name" id="member-name-1">박래권</h3>
+                        <p class="member-bio">개발자을 꿈꾸는 유망주 박래권 입니다.</p>
+                    </div>
+
+                    <div class="team-card" role="region" aria-labelledby="member-name-2">
+                        <div class="member-avatar">기술</div>
+                        <h3 class="member-name" id="member-name-2">유동윤</h3>
+                        <p class="member-bio">잡다한 코딩 및 허접한 기술 담당인 유동윤 이라 합니다. ;3</p>
+                    </div>
+
+                    <div class="team-card" role="region" aria-labelledby="member-name-3">
+                        <div class="member-avatar">디자인</div>
+                        <h3 class="member-name" id="member-name-3">트랄랄레로보타리릴리크로코딜로</h3>
+                        <p class="member-bio">AI 팀원인 트랄랄레로보타리릴리크로코딜로 입니다. 잘 부탁드립니다.</p>
+                    </div>
+                </section>
+
+                <section class="backstory-section">
+                    <div class="backstory-container">
+                        <h2 class="backstory-title">우리에 대하여</h2>
+                        <div class="backstory-content">
+                            <div class="story-block">
+                                <h3 class="story-subtitle">팀에 대하여</h3>
+                                <p class="story-text">
+                                    Q: 우리 팀 이름은 무엇인가요? <br>
+                                    A: 일산화 이수소<br><br>
+                                    Q: 팀 탄생스토리는 무엇인가요? <br>
+                                    A: 처음엔 그냥 노는 사람들이었다. <br>
+                                    이야기를 나누다 보니 아이디어가 쏟아졌고, <br>
+                                    장난처럼 지은 이름이 우리를 하나로 묶었다. <br>
+                                    그렇게 팀이 시작되었다. <br>
+
+                                </p>
+                            </div>
+
+                            <div class="story-block">
+                                <h3 class="story-subtitle">팀의 철학</h3>
+                                <p class="story-text">
+                                    <i>"철학은 어두운 방에서 검은 고양이를 찾는 것과 같다."</i> <br><br>
+                                    일상도 작품이다 | 우리가 마주치는 일상의 모든 것이 창작의 재료이다. <br>
+                                    결과보다 과정 | 우리는 과정 속에서 배운다. <br>
+                                    기술은 끝이 아니라 시작이다 | 기술은 어떤 문제를 '해결하는 종점' 이 아니라, 새로운 가능성의 출발점이다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <aside class="poster-section">
+                <div class="poster-container">
+                    <h2 class="poster-title">팀 포스터</h2>
+                    <div class="poster-image">
+                        <div class="sample-poster">
+                            <!-- alt 추가 -->
+                            <img src="img/벚꽃축제.png" alt="Spring-themed team poster" class="custom-poster-image"
+                                width="350">
+                            <div class="poster-content">
+                            </div>
+                            <div class="poster-year">2025</div>
+                        </div>
+
+                    </div>
+                    <div class="poster-details">
+                        <p class="poster-info">
+                            <strong>포스터에 대하여</strong><br>
+                        <p>우리 팀을 대표하는 키워드는 봄, 벚꽃, 온기이며 시각적으로 따듯함, 다정함, 행복함의 감정을 전달하고 싶은 마음에 제작하게 됐습니다.</p>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <footer class="footer">
+            <p class="footer-text">&copy; 2025 Team: Dihydrogen monoxide. Crafted with passion and innovation.</p>
+        </footer>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            const button = document.querySelector('.theme-toggle');
+
+            if (body.getAttribute('data-theme') === 'dark') {
+                body.removeAttribute('data-theme');
+                button.innerHTML = '🌙 Dark Mode';
+            } else {
+                body.setAttribute('data-theme', 'dark');
+                button.innerHTML = '☀️ Light Mode';
+            }
+        }
+
+        // Add smooth scroll behavior
+        document.addEventListener('DOMContentLoaded', function () {
+            const cards = document.querySelectorAll('.team-card, .stat-card');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationPlayState = 'running';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            cards.forEach(card => {
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+
+</html>
