@@ -1,0 +1,135 @@
+@charset "UTF-8";
+
+/*
+# 프로젝트명 : [팀빌딩 Round2]팀 포스터 만들기
+# 파일설명 : 팀 포스터 제작을 위한 CSS 초기화
+# 파일버전 : 0.1.0
+# 생성일 : 2025.05.31
+# 생성자 : 김선미(온다)
+# 수정일 : -
+# 수정자 : -
+# 작업내용 : -
+*/
+
+/* 기본 설정 */
+body {
+  background: linear-gradient(to bottom, #e0f7e9, #e0f4fa);
+  margin: 0;
+  padding: 0;
+  color: #2e3d40;
+}
+
+.visually-hidden {
+  position: absolute;
+  left: -9999px;
+}
+
+/* 상단 헤더 */
+.poster-header {
+  text-align: center;
+  padding: 30px 20px 10px;
+}
+
+.title-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.logo-inline {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* 약간의 그림자 (선택 사항) */
+}
+
+.main-title {
+  font-size: 100px;
+  color: #00695c;
+  margin: 0;
+}
+
+.slogan {
+  font-size: 1.1rem;
+  color: #388e3c;
+  margin-top: 8px;
+}
+
+/* 메인 레이아웃 */
+.poster-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* 설명 영역 (왼쪽) */
+.poster-description {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(80, 80, 80, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 6px rgba(0, 80, 80, 0.08);
+}
+
+.info-card h3 {
+  margin: 0 0 8px;
+  font-size: 1.2rem;
+  color: #00796b;
+}
+
+/* 포스터 이미지 (오른쪽) */
+.poster-image img {
+  max-width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 100, 100, 0.15);
+}
+
+/* 반응형 대응 */
+@media (max-width: 768px) {
+  .poster-main {
+    grid-template-columns: 1fr;
+  }
+
+  .title-wrap {
+    flex-direction: column;
+  }
+
+  .logo-inline {
+    width: 50px;
+  }
+
+  .main-title {
+    font-size: 1.6rem;
+  }
+}
+
+footer {
+  background-color: #e0f4ea; /* 연한 초록 계열 */
+  padding: 20px 0;
+  text-align: center;
+  border-top: 2px solid #b2dfdb;
+  margin-top: 40px;
+}
+
+footer p {
+  margin: 0;
+  color: #33691e;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}

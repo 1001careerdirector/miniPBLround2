@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="지구의 날을 알리는 친환경 캠페인 포스터">
+  <title>지구의 날 캠페인</title>
+  <link rel="stylesheet" href="css/poster.css">
+	<!--
+	# 프로젝트명 : [팀빌딩 Round2]팀 포스터 만들기
+	# 파일설명 : 팀 포스터를 만들기 위한 프롬프트 기획
+	# 파일버전 : 0.1.0
+	# 생성일 : 2025.05.31
+	# 생성자 : 김선미(온다)
+	# 수정일 : -
+	# 수정자 : -
+	# 작업내용 : -
+	-->
+	
+	<!-- 1. 검색(SEO) 고려한 HTML 문서 정보 적용-->	
+	<!-- 2. 폰트 적용(@font-face/cdn/local down 중 택1) -->
+	<!-- 3. 팀칼라/팀상징 톤&매너 적용 -->
+
+	<!-- 4. 스타일적용 외부스타일(poster.css/reset.css/member1.css~memberN.css) -->
+
+	<!-- 5. 시멘틱하게 마크업 -->
+	<!-- 6. 접근성/사용성 고려하여 작성 -->
+	<!-- 7. 폼 엘리먼트는 HTML5 유효성 검사 활용 -->
+	<!-- 8. W3C Validator HTML : https://validator.w3.org/ -->
+	<!-- 9. W3C Validator CSS : https://jigsaw.w3.org/css-validator/ -->
+	<!-- 10. AI 리팩토링으로 품질 향상 : AI에게 사용성과 접근성 개선 요청
+	(접근성마크 획득 가능한 수준으로 웹문서를 만들어야해. 기본 접근성 적용과 aria 속성 활용한 소스 개선사항 상세하게 알려줘!) 
+	-->
+  </head>
+
+  <body>
+  <header class="poster-header">
+    <div class="title-wrap">
+      <img src="images/logo.png" alt="캠페인 로고" class="logo-inline">
+      <h1 class="main-title">소환사의 협곡</h1>
+    </div>
+    <p class="slogan">덧없이 화창한 날씨와 함께</p>
+  </header>
+
+  <main class="poster-main">
+    <!-- 왼쪽 설명 영역 -->
+    <section class="poster-description" aria-labelledby="desc-title">
+      <h2 id="desc-title" class="visually-hidden">캠페인 설명</h2>
+
+      <div class="info-card">
+        <h3>👥 팀원 소개</h3>
+        <p>리더: 강민승<br>기술: 오동렬<br>디자인: 블리츠크랭크</p>
+      </div>
+
+      <div class="info-card">
+        <h3>📘 팀에 대하여</h3>
+        <p>2025년, 서형석, 박동현, 블리츠크랭크가 소환사의 협곡에 당도하게 되었다. 
+		<br>그 후로 많은 세월이 흘러 강민승과 오동렬, 아직까지 남아있던 블리츠크랭크가 그 의지를 이어받아
+		<br>소환사의 협곡의 환경을 지키기 위해 소환사의 협곡에 오게 되는데..</p>
+      </div>
+
+      <div class="info-card">
+        <h3>🌱 팀의 철학</h3>
+        <p>내 통제 안에 있는 것과 밖에 있는 것을 구분하라</p>
+      </div>
+    </section>
+
+    <!-- 오른쪽 포스터 영역 -->
+		<div class="poster-image">
+        <img src="images/earth_day2.png" alt="지구의 날 캠페인 포스터">
+	  </div>
+   </main>
+
+   <footer>
+	 <p>© 2025 소환사의 협곡. All rights reserved.</p>
+   </footer>
+  </body>
+</html>
