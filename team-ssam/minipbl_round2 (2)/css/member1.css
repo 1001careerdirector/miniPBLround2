@@ -1,0 +1,95 @@
+@charset "UTF-8";
+/*
+# 프로젝트명 : [팀빌딩 Round2]팀 포스터 만들기
+# 파일설명 : 팀 소개 관련 CSS
+# 수정날자 : 2025.06.09
+# 수정자 :
+# 작업내용 :
+*/
+
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1e1e2f;
+  color: #dcdcdc;
+}
+
+/* --- 팀명 크게 강조 --- */
+.teamname {
+  text-align: center;
+  padding: 140px 20px 60px;
+  letter-spacing: 0.08em;
+}
+
+.teamname h2 {
+  font-size: 72px;
+  font-weight: 900;
+  background: linear-gradient(90deg, #a0a0a0, #d0d0d0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 14px;
+  text-shadow: 0 0 12px rgba(180, 180, 180, 0.7);
+}
+
+.teamname p {
+  font-size: 22px;
+  color: #bababa;
+  max-width: 720px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-style: italic;
+  letter-spacing: 0.02em;
+}
+
+/* --- 전체 레이아웃 --- */
+.teamwrap {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1180px;
+  margin: 0 auto 80px;
+  padding: 0 20px;
+  gap: 36px;
+  flex-wrap: nowrap;
+}
+
+/* 왼쪽 콘텐츠 박스 묶음 */
+.teamcontent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* 팀명, 기술자 리스트 */
+.teamcontent .box {
+  background: linear-gradient(135deg, #2a2a3f, #1c1c2a);
+  border-left: 6px solid #8c8c8c;
+  border-radius: 16px;
+  padding: 26px 36px;
+  box-shadow: 0 8px 28px rgba(140, 140, 140, 0.25);
+  transition: transform 0.3s ease;
+  color: #ccc;
+  font-family: 'Georgia', serif;
+}
+
+.teamcontent .box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 36px rgba(140, 140, 140, 0.4);
+}
+
+/* 기술자 목록 */
+
+/* --- 오른쪽 포스터 영역 (고정) --- */
+  .info1,
+  .info2 {
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+
+
+

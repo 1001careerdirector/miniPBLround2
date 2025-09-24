@@ -1,0 +1,81 @@
+@charset "UTF-8";
+/*
+# 프로젝트명 : [팀빌딩 Round2]팀 포스터 만들기
+# 파일설명 : 팀 소개 관련 CSS
+# 수정날자 : 2025.06.09
+# 수정자 :
+# 작업내용 :
+*/
+.teamposter {
+    position: fixed;       /* 화면 고정 */
+    top: 60px;
+    right: 40px;
+    width: 320px;
+    background: #2c2c44;
+    border-radius: 18px;
+    box-shadow: 0 8px 26px rgba(140, 140, 140, 0.3);
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: -1;          /* 글자 뒤에 위치 */
+    pointer-events: none; /* 클릭 무시 */
+    user-select: none;
+  }
+  
+  /* 이미지 위 제목 스타일 */
+  .teamposter .poster-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #e0e0e0;
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.3);
+    user-select: none;
+  }
+  
+  /* 이미지 */
+  .teamposter img {
+    border-radius: 14px;
+    max-width: 100%;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* 이미지 아래 설명 텍스트 */
+  .teamposter .poster-desc {
+    font-size: 16px;
+    color: #aaa;
+    font-style: italic;
+    line-height: 1.4;
+    user-select: none;
+    max-width: 100%;
+  }
+  
+  /* --- 하단 카피라이트 --- */
+  footer {
+    text-align: center;
+    padding: 40px 20px 20px;
+    font-size: 14px;
+    color: #888;
+    background-color: #1a1a2a;
+    border-top: 1px solid #444;
+    margin-top: 80px;
+    user-select: none;
+  }
+  
+  /* --- 반응형 --- */
+  @media (max-width: 900px) {
+    .teamwrap {
+      flex-direction: column;
+    }
+    .teamposter {
+      position: relative !important;
+      top: 0 !important;
+      right: auto !important;
+      width: 100% !important;
+      margin-bottom: 32px;
+      flex: none;
+      pointer-events: auto;
+      user-select: auto;
+      z-index: auto;
+    }
+}

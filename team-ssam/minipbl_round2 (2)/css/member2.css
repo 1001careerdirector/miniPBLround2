@@ -1,0 +1,76 @@
+@charset "UTF-8";
+/*
+# 프로젝트명 : [팀빌딩 Round2]팀 포스터 만들기
+# 파일설명 : 팀 소개 관련 CSS
+# 수정날자 : 2025.06.09
+# 수정자 :
+# 작업내용 :
+*/
+.info1, .info2 {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 28px;
+    font-size: 18px;
+    color: #a3a3a3;
+    font-weight: 600;
+    border-bottom: 1px solid #4a4a4a;
+    padding-bottom: 12px;
+    margin-bottom: 18px;
+    list-style: none;
+  }
+  
+  .info1 li, .info2 li {
+    background: rgba(160, 160, 160, 0.12);
+    padding: 9px 18px;
+    border-radius: 14px;
+    box-shadow: inset 0 0 6px #9e9e9e66;
+    white-space: nowrap;
+    user-select: none;
+  }
+  
+  /* 탄생배경 + 팀스토리 묶음 */
+  .info3 {
+    background: linear-gradient(135deg, #222233, #1a1a28);
+    border-radius: 14px;
+    padding: 28px 36px;
+    box-shadow: 0 6px 22px rgba(110, 110, 110, 0.3);
+    color: #bbb;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    letter-spacing: 0.02em;
+  }
+  
+  /* --- 강조된 부제목 (타원형 강조 박스) --- */
+  .info3 h3 {
+    display: inline-block;
+    background: #3a3a4a;
+    padding: 8px 22px;
+    border-radius: 999px;
+    color: #e0e0e0;
+    font-size: 22px;
+    margin-bottom: 18px;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(120, 120, 120, 0.3);
+    user-select: none;
+  }
+  
+  .info3 p {
+    font-style: normal;
+    color: #a6a6a6;
+    margin-bottom: 12px;
+  }
+  
+  .info3 p span strong {
+    color: #b0b0b0;
+    font-weight: 700;
+  }
+  
+  .info3 p span {
+    color: #9a9a9a;
+  }
+  
+  .info3 em {
+    font-style: italic;
+    color: #a3a3a3;
+  }
+
