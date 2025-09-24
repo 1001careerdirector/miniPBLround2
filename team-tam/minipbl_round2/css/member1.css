@@ -1,0 +1,105 @@
+@charset "UTF-8";
+
+/*
+# 프로젝트명 : [팀빌딩 Round2]팀 포스터 만들기
+# 파일설명 : 팀 소개 관련 CSS
+# 파일버전 : 0.1.0
+# 생성일 : 2025.05.31
+# 생성자 : 김선미(온다)
+# 수정일 : 6/9
+# 수정자 : 강민준
+# 작업내용 : 배경색 추가, 이미지 수정
+*/
+
+body {
+  position: relative;
+  color: #efefef;
+  background: linear-gradient(
+    to bottom right,
+    #fff200 0%,
+    #ff0000 100%,
+    #ff7f00 30%
+  );
+  color: #efefef;
+}
+
+#wrapper {
+  width: 100%;
+}
+
+.section2 {
+  margin: 50px 0;
+}
+
+.teamwrap {
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  gap: 50px;
+
+  text-align: justify;
+}
+.teamwrap > div {
+  width: 50%;
+}
+
+.teamposter img {
+  width: 100%;
+}
+
+.teamname {
+  padding: 200px 0;
+  font-size: 50px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+}
+.teamname h2 {
+  position: relative;
+}
+.teamname h2::before {
+  content: '';
+  position: absolute;
+  top: -130px;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  margin-left: -100px;
+  background: url('../images/logo3.png') no-repeat center top;
+  background-size: 200px 200px;
+  opacity: 0.1;
+}
+.teamname p {
+  font-size: 30px;
+  font-weight: normal;
+  color: #fff;
+  text-align: center;
+}
+
+/* 미래유망 PBL + AI 페어 프로젝트 영상 */
+.mediapbl {
+  width: 1000px;
+  height: 600px;
+  margin-top: 200px;
+  vertical-align: top;
+}
+
+.box ul {
+  margin-bottom: 30px;
+}
+.box ul.info1 {
+  font-size: 20px;
+}
+.box ul.info3 {
+  margin-top: 50px;
+}
+.box ul.info3 li {
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+footer {
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+}

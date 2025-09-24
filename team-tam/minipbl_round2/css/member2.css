@@ -1,0 +1,143 @@
+@charset "UTF-8";
+
+/*
+# 프로젝트명 : [팀빌딩 Round2]팀 포스터 만들기
+# 파일설명 : 팀원 지원을 위한 CSS
+# 파일버전 : 0.1.0
+# 생성일 : 2025.05.31
+# 생성자 : 김선미(온다)
+# 수정일 : 6/9
+# 수정자 : 조영서
+# 작업내용 : 애니메이션을 추가했다
+*/
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.teamname h2 {
+  font-family: 'Gmarket Sans', sans-serif;
+  font-size: 48px;
+  color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.teamname h2::after {
+  content: '🔥';
+  font-size: 48px;
+  animation: fadeInUp 1.4s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.teamname {
+  animation: fadeInUp 1.4s ease-out forwards;
+}
+
+.box,
+.teamposter,
+.mediapbl {
+  animation: zoomIn 1.2s ease-out forwards;
+  animation-delay: 0.4s;
+}
+
+@media (max-width: 768px) {
+  .teamwrap {
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 20px;
+  }
+  .teamwrap > div {
+    width: 100%;
+  }
+  .teamname {
+    padding: 100px 0;
+    font-size: 36px;
+  }
+  .teamname p {
+    font-size: 20px;
+  }
+  .mediapbl {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+  }
+}
+
+.teamposter {
+  position: relative;
+  overflow: visible;
+  transition: transform 0.4s ease-in-out;
+  z-index: 1;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.teamposter:hover {
+  transform: translateY(-5px);
+}
+.teamposter img {
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s;
+  will-change: transform;
+  display: block;
+  border-radius: 12px;
+}
+.teamposter:hover img {
+  transform: scale(1.08);
+  z-index: 2;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+.teamposter::after {
+  content: '낡은 도시는 가고, 스마트 시티를 만든다';
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 18px;
+  white-space: nowrap;
+}
+
+/* 모달 스타일 */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+.modal img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}

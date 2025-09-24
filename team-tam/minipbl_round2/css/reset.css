@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+/*
+# 프로젝트명 : [팀빌딩 Round2]팀 포스터 만들기
+# 파일설명 : 팀 포스터 제작을 위한 CSS 초기화
+# 파일버전 : 0.1.0
+# 생성일 : 2025.05.31
+# 생성자 : 김선미(온다)
+# 수정일 : 6/9
+# 수정자 : 조영서
+# 작업내용 : 없다
+*/
+
+/* 기본 박스 설정 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.clearfix::after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+/* 기본 폰트 및 라인 설정 */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.5;
+}
+
+/* 리스트 스타일 제거 */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 링크 초기화 */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 이미지, 비디오 반응형 설정 */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 버튼, input, textarea 초기화 */
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+/* 테이블 설정 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+object,
+audio,
+video,
+embed,
+iframe {
+  width: 100%;
+}

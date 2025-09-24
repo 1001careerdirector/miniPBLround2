@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>탐 켄치와 함께 재개발 포스터</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--
+      프로젝트 메타정보
+      # 프로젝트명 : [팀빌딩 Round2]팀 포스터 만들기
+      # 파일설명 : 팀 포스터 제작을 위한 HTML 프롬프트 기획 파일
+      # 파일버전 : 0.1.0
+      # 생성일 : 2025.05.31
+      # 생성자 : 김선미(온다)
+      # 최근 수정일 : 2025.06.09
+      # 최근 수정자 : 조영서
+      # 작업내용 : 내용 다듬기, 폰트 추가, 애니메이션 적용
+    -->
+
+    <!-- SEO 최적화를 고려한 기본 문서 정보 설정 -->
+    <!-- 문자 인코딩과 뷰포트 설정은 모바일 대응을 위한 필수 요소 -->
+
+    <!-- 구글 웹폰트 연결 : 팀 포스터의 한글 폰트로 Gmarket Sans, Noto Sans KR 사용 -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gmarket+Sans:wght@700&family=Noto+Sans+KR:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- 외부 CSS 연결 : 팀 포스터 전용 스타일시트 적용 -->
+    <link href="CSS/poster.css" rel="stylesheet" />
+
+    <!--
+      개발 및 유지보수를 위한 체크리스트 주석
+      1. 시멘틱 마크업 적용
+      2. 접근성 향상 (aria 속성, 키보드 네비게이션 등)
+      3. HTML5 폼 유효성 검사 활용
+      4. W3C Validator를 통한 표준 준수 검증
+      5. AI 도구 활용 리팩토링 및 품질 개선
+    -->
+  </head>
+
+  <body>
+    <!-- 전체 페이지 래퍼 : 페이지 레이아웃을 감싸는 최상위 컨테이너 -->
+    <div id="wrapper">
+      <!-- 첫 번째 섹션: 팀 정보 및 메인 콘텐츠 영역 -->
+      <div class="section1">
+        <div class="teaminfo">
+          <div class="teamname">
+            <!-- 헤더 영역 : 팀명과 슬로건 등 주요 정보 -->
+            <header>
+              <h2>탐 켄치와 함께 재개발</h2>
+              <p>재개발의 여정</p>
+            </header>
+          </div>
+
+          <!-- 메인 콘텐츠 영역 -->
+          <main>
+            <div class="teamwrap">
+              <div class="teamcontent">
+                <div class="box">
+                  <!-- 팀 기본 정보 리스트 -->
+                  <section>
+                    <ul class="info1" aria-label="팀 기본 정보">
+                      <li>팀 명 : 탐 켄치와 함께 재개발</li>
+                      <li>팀 컬러 : 빨간색</li>
+                      <li>팀 상징 : 탐 켄치</li>
+                    </ul>
+                  </section>
+
+                  <!-- 팀원 및 역할 리스트 -->
+                  <section>
+                    <ul class="info2" aria-label="팀원 및 역할 정보">
+                      <li>팀원 : 조영서,강민준,탐 켄치</li>
+                      <li>리더 : 강민준</li>
+                      <li>기술 : 조영서</li>
+                      <li>디자인 : 탐 켄치</li>
+                    </ul>
+                  </section>
+
+                  <!-- 팀 탄생 배경 및 스토리 -->
+                  <section>
+                    <ul class="info3" aria-label="팀 탄생 배경과 스토리">
+                      <li>
+                        <h3>탄생 배경</h3>
+                        <p>
+                          2025년, 미래 유망에 참여한 학생들 중 랜덤으로 2명이 사람이 팀이 되는데. 
+                          그 2명이 라이엇과 ChatGPT를 통해 공동 개발한
+                          인공지능 ‘탐 켄치’와 팀을 이루게 된다.
+                        </p>
+                      </li>
+                      <li>
+                        <h3>팀 스토리</h3>
+                        <p>
+                          미래 유망에 참여하게된 영서와 민준이 한 팀이 되어, 인공지능 탐 켄치와 함께 
+                          재개발을 향한 도전이 시작하게 된다.
+                        </p>
+                      </li>
+                    </ul>
+                  </section>
+                </div>
+              </div>
+
+              <!-- 팀 포스터 이미지 영역 -->
+              <div class="teamposter">
+                <img
+                  src="images/탐 켄치와 함께 재개발 포스터.png"
+                  alt="탐 켄치와 함께 재개발 포스터 이미지"
+                />
+              </div>
+            </div>
+          </main>
+        </div>
+      </div>
+
+      <!-- 페이지 하단 푸터 영역 -->
+      <footer>
+        <p>ⓒ 2025 탐 켄치와 함께 재개발. All rights reserved.</p>
+      </footer>
+    </div>
+
+    <!-- 모달 윈도우 : 이미지 확대 보기 용 -->
+    <div id="imageModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalImgAlt">
+      <img id="modalImg" src="" alt="확대 이미지" />
+    </div>
+
+    <!-- 자바스크립트 파일 연결: 모달 동작 및 기타 인터랙션 처리 -->
+    <script src="JS/poster.js"></script>
+  </body>
+</html>
